@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -303,11 +303,31 @@
   </section>
 
   <div class="last-updated-bar">
-    🍃 Maps last updated: <span id="last-updated">checking...</span>
+    🍃 Maps last updated: <span id="last-updated">2026-06-19 18:14 EST</span>
   </div>
 
   <footer>Honeydew Homes SMP &nbsp;·&nbsp; Bedrock Edition &nbsp;·&nbsp; Maps rendered with uNmINeD</footer>
 
-  <script>n  </script>
+  <script>
+    // Generate fireflies
+    const container = document.querySelector('.fireflies');
+    for (let i = 0; i < 28; i++) {
+      const f = document.createElement('div');
+      f.className = 'firefly';
+      f.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        --d: ${6 + Math.random() * 10}s;
+        --delay: ${Math.random() * 8}s;
+        --tx: ${(Math.random() - 0.5) * 80}px;
+        --ty: ${-20 - Math.random() * 80}px;
+      `;
+      container.appendChild(f);
+    }
+
+<div class="last-updated-bar">
+    🍃 Maps last updated: <span id="last-updated">2026-06-19 18:14 EST</span>
+  </div>
+  </script>
 </body>
 </html>
