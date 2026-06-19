@@ -326,7 +326,7 @@
     }
 
 // Load timestamp from generated file
-fetch('last-updated.txt')
+fetch('https://raw.githubusercontent.com/Heromcbe/Honeydew-Homes-SMP/master/last-updated.txt')
   .then(r => r.text())
   .then(text => {
     document.getElementById('last-updated').textContent = text.trim() + ' EST';
